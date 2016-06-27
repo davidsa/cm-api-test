@@ -1,0 +1,17 @@
+{
+  "name": "cm-api-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "createsend-node": "^0.8.2",
+    "node-rest-client": "^1.8.0",
+    "util": "^0.10.3"
+  }
+}

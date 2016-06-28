@@ -14,7 +14,8 @@ var url = `https://api.createsend.com/api/v3.1/templates/${CLIENT_ID}.json`;
 var args = {
     data: {
         "Name": "Heroku Test Template",
-        "HtmlPageURL": "https://nameless-wave-23937.herokuapp.com/"
+        "HtmlPageURL": "https://nameless-wave-23937.herokuapp.com/",
+        "ZipFileURL": "https://nameless-wave-23937.herokuapp.com/assets.zip"
     },
     headers: {
         "Content-Type": "application/json"
@@ -22,6 +23,4 @@ var args = {
 };
 client.post(url, args, (data, res) => {
     console.log("Data " + JSON.stringify(data));
-    // console.log("Response: " + util.inspect(res));
-
 });

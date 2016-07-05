@@ -3,7 +3,8 @@ const Client = require('node-rest-client').Client;
 const util = require('util');
 const API_KEY = "fa90983082fa2c92635b35566e5f3c77";
 const CLIENT_ID = "37c50c6b8bd00a4f426b497c4c8782a6";
-const TEMPLATE_ID = "8c87b39b87b23f5a465d427deab765dc";
+// const TEMPLATE_ID = "8c87b39b87b23f5a465d427deab765dc";
+const TEMPLATE_ID = "0115eba121ddcbf0d363c45788596629";
 
 const client = new Client({
     user: API_KEY,
@@ -13,7 +14,7 @@ const client = new Client({
 var url = `https://api.createsend.com/api/v3.1/campaigns/${CLIENT_ID}/fromtemplate.json`;
 var args = {
     data: {
-        "Name": "My Campaign Test from API",
+        "Name": "Campaign with default Template",
         "Subject": "Testing API",
         "FromName": "David from UruIT",
         "FromEmail": "david.sttivend@uruit.com",
@@ -25,6 +26,9 @@ var args = {
         "TemplateContent": {
             "Singlelines": [{
                 "Content": "This is the campaing title"
+            }],
+            "Multilines": [{
+                "Content": "<p>This is example</p><p>multiline <a href=\"http://example.com\">content</a>...</p>"
             }],
             "Images": [{
                 "Content": "https://authoring.wrap.co/images/wrap-icon-nav.png",
